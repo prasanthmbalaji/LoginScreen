@@ -10,6 +10,14 @@ import UIKit
 
 class ViewController: UIViewController
 {
+    let userNameField = UITextField()
+    
+    let passwordField = UITextField()
+    
+    var logoView = UIImageView()
+    
+    let loginButton = UIButton( type: .system )
+    
 
     override func viewDidLoad()
     {
@@ -34,10 +42,6 @@ class ViewController: UIViewController
         
 
         
-    
-        
-        
-        
         
         
         
@@ -48,7 +52,6 @@ class ViewController: UIViewController
         
         // Create text field
         
-        let userNameField = UITextField()
         
         //userNameField.placeholder = "Username"
         
@@ -84,9 +87,7 @@ class ViewController: UIViewController
     {
         
         // Create text field
-        
-        let passwordField = UITextField()
-        
+                
         //passwordField.placeholder = "Username"
         
         passwordField.delegate = self
@@ -121,8 +122,6 @@ class ViewController: UIViewController
     {
         
         // Create UIImageView
-        
-        var logoView = UIImageView()
         
         // Add insta logo to UImageView
         
@@ -163,27 +162,31 @@ class ViewController: UIViewController
         
     }
     
+    
+    
     func addLoginButton()
     {
         
-        let loginButton = UIButton( type: .system )
+        view.addSubview( loginButton )
         
-        loginButton.addSubview( loginButton )
+        loginButton.addTarget( self, action: #selector( loginButtonPressed ), for: .touchUpInside )
         
-        passwordField.delegate = self
+        //passwordField.delegate = self
                
                
         loginButton.translatesAutoresizingMaskIntoConstraints = false
         
         loginButton.setTitle( "Login", for: .normal )
         
-        loginButton.setTitleColor( .blue, for: .normal )
+        loginButton.setTitleColor( .white, for: .normal )
         
-        let bottomConstraint = loginButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -150)
+        loginButton.backgroundColor = .blue
+        
+        let bottomConstraint = loginButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -200)
         
         let leftConstraint = loginButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20 )
         
-        let rightConstraint = loginButton.rightAnchor.constraint( equalTo: view.rightAnchor, constant: 20 )
+        let rightConstraint = loginButton.rightAnchor.constraint( equalTo: view.rightAnchor, constant: -20 )
         
         bottomConstraint.isActive = true
         
@@ -193,6 +196,34 @@ class ViewController: UIViewController
         
         
         
+        
+    }
+    @objc
+    func loginButtonPressed() {
+        
+        print( "Button Pressed" )
+        
+        if let username = userNameField.text,
+        let password = passwordField.text {
+            
+            if ( !username.isEmpty && !password.isEmpty ) {
+                
+                print( username )
+                
+                let usernameViewController = UsernameViewController( username: username )
+                
+                self.navigationController?.pushViewController( usernameViewController, animated: true )
+                
+            }
+            else {
+                
+                print( "Not Entered" )
+                
+            }
+            
+            
+        }
+            
         
     }
     

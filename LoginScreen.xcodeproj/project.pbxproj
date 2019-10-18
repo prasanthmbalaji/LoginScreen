@@ -15,6 +15,7 @@
 		7B8566462351273C007D5405 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8566442351273C007D5405 /* LaunchScreen.storyboard */; };
 		7B8566512351273C007D5405 /* LoginScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8566502351273C007D5405 /* LoginScreenTests.swift */; };
 		7B85665C2351273C007D5405 /* LoginScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B85665B2351273C007D5405 /* LoginScreenUITests.swift */; };
+		7BA69CB6235A6C7B00444680 /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA69CB5235A6C7B00444680 /* UserNameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		7B8566572351273C007D5405 /* LoginScreenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginScreenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B85665B2351273C007D5405 /* LoginScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenUITests.swift; sourceTree = "<group>"; };
 		7B85665D2351273C007D5405 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BA69CB5235A6C7B00444680 /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				7B8566422351273C007D5405 /* Assets.xcassets */,
 				7B8566442351273C007D5405 /* LaunchScreen.storyboard */,
 				7B8566472351273C007D5405 /* Info.plist */,
+				7BA69CB5235A6C7B00444680 /* UserNameViewController.swift */,
 			);
 			path = LoginScreen;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				7B85663E2351273B007D5405 /* ViewController.swift in Sources */,
 				7B85663A2351273B007D5405 /* AppDelegate.swift in Sources */,
 				7B85663C2351273B007D5405 /* SceneDelegate.swift in Sources */,
+				7BA69CB6235A6C7B00444680 /* UserNameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
